@@ -1,4 +1,4 @@
-oapiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: goserver
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: nginx:latest
+          image: wesleywillians/hello-go:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8000

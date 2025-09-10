@@ -29,6 +29,13 @@ kind get clusters
 kubectl cluster-info <cluster-name>
 ```
 
+
+### Aplicando um proxy para ver a API do kubernets
+
+```sh
+kubectl proxy --port=9095 # este comando vai redirecionar para a porta interna. 
+```
+
 ## 📁 Arquivos de Configuração
 
 Este repositório contém exemplos de:
