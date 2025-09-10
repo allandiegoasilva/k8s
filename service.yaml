@@ -5,9 +5,9 @@ metadata:
 spec:
   selector:
     app: goserver
-  type: ClusterIP
+  type: NodePort # ClusterIp: Serviço interno, apenas dentro do cluster. # NodePort: Serviço externo, acessível de fora do cluster. # LoadBalancer: Serviço externo, acessível de fora do cluster, com balanceamento de carga. #
   ports:
     - name: goserver-service
-      port: 80
-      targetPort: 8000
+      port: 80 # Porta do serviço dentro do cluster
+      targetPort: 8000 # Porta do pod dentro do cluster
       protocol: TCP
